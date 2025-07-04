@@ -3,8 +3,7 @@ import connectDB from './database/db.js';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+app.get('/products', (req, res) => {
 });
 
 
