@@ -1,13 +1,14 @@
-import express from 'express';
-import connectDB from './database/db.js';
-
+import express from "express";
+import connectDB from "./database/db.js";
+import productRouter from "./routes/product.route.js";
 const app = express();
 
-app.get('/products', (req, res) => {
-});
 
+app.use(express.json());
 
-app.listen(process.env.PORT || 8000, () =>{
+app.use("/products", productRouter);
+
+app.listen(process.env.PORT || 8000, () => {
   connectDB();
   console.log(`Server is running on port ${process.env.PORT || 8000}`);
-} )
+});
