@@ -11,11 +11,11 @@ const Navbar = () => {
     <Container maxW={"1140px"} px={4} >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"} flexDir={{base: "column", sm: "row"}}>
         <Text
-          fontSize={{ base: "22", sm: "28"}}
+          fontSize={{ base: "22px", sm: "28px"}}
           fontWeight={"bold"}
           textTransform={"uppercase"}
           textAlign={"center"}
-          bgGradient="to-r" gradientFrom="cyan.400" gradientTo="blue.500"
+          bgGradient="to-r" gradientFrom="cyan.200" gradientTo="cyan.700"
           bgClip={"text"}
         >
           <Link to={"/"}>Product Store 🛒</Link>
