@@ -2,7 +2,6 @@ import { Container, VStack, Box, Heading, Input, Button } from '@chakra-ui/react
 import React from 'react';
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { useProductStore } from '../store/product.js';
-import { toaster } from "@/components/ui/toaster"
 
 const CreatePage = () => {
   const [newProduct, setNewProduct] = React.useState({
@@ -17,16 +16,9 @@ const CreatePage = () => {
     const {success, message} = await createProduct(newProduct);
 
   if (!success) {
-    toaster.create({
-      title: "Error",
-      description: message,
-    });
+    alert(message);
   } else {
-    toaster.create({
-      title: "Success",
-      description: message,
-
-    });
+    alert(message);
   }
 };
   return (
